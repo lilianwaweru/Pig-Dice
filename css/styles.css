@@ -12,3 +12,6 @@ body{
 #reset{
   margin-left: 27%;
 }
+#player{
+  display: none;
+}

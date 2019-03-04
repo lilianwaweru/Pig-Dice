@@ -34,14 +34,24 @@ function play2(){
 var player1 = new Dice(name,roll1, score1, total1);
 var player2 = new Dice( name,roll2, score2,total2);
 
-
-
+function resetButton(){
+  $("#reset").click(function (){
+    $("#roll-one").empty();
+    $("#score-one").empty();
+    $("#total-one").empty();
+    $("#roll-two").empty();
+    $("#score-two").empty();
+    $("#total-two").empty();
+  });
+}
 $(document).ready(function(){
   $('#dice').submit(function (event) {
     event.preventDefault();
     $("#dice").hide();
     $("#player").show();
+    resetButton();
 });
+
   $("#roll1").click(function(event){
     event.preventDefault();
     roll1 = Math.floor((Math.random() * 6) + 1);
@@ -83,7 +93,7 @@ $(document).ready(function(){
   $("#hold2").click(function(event){
     event.preventDefault();
     roll2+=score2
-    alert(score2)
+     $("#total-two").text(total2);
     if(score2==100){
       alert("You the winner")
     }else{
