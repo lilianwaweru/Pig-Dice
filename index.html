@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
-    <title>PIG DICE</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>PIG DICE</h1>
-      <h2>Rules</h2>
-      <ul>
-        <li>When one player reaches 100,the game ends and the player is the winner.</li>
-        <li>On a turn,a player rolls the die repeatedly.</li>
-        <li>If a player rools at 1,his turn is over and the points are accumulated and the next player takes the turn.</li>
-        <li>A player can choose to hold if they don't want to take a chance of rolling a 1 and loosing all points.</li>
-      </ul>
-      <form id="dice">
-          <div class="form-group">
-            <label for="new-player">Player 1</label>
-            <input type="text" class="form-control" id="new-player">
-          </div>
-          <div class="form-group">
-            <label for="new-player2">Player2</label>
-            <input type="text" class="form-control" id="new-player2">
-          </div>
-      <span class="btn btn-primary" id="add-address">New Game</span>
-        <button type="submit" class="btn">Start Game</button>
-      </form>
+  <title>PIG DICE</title>
+</head>
+<body>
+  <div class="container">
+    <h1>PIG DICE</h1>
+    <h2>Rules</h2>
+    <ul>
+      <li>When one player reaches 100,the game ends and the player is the winner.</li>
+      <li>On a turn,a player rolls the die repeatedly.</li>
+      <li>If a player rools at 1,his turn is over and the points are accumulated and the next player takes the turn.</li>
+      <li>A player can choose to hold if they don't want to take a chance of rolling a 1 and loosing all points.</li>
+    </ul>
+    <form id="dice">
+      <div class="form-group">
+        <label for="new-first-name">First Name</label>
+        <input type="text" class="form-control" id="new-first-name">
+      </div>
+      <div class="form-group">
+        <label for="new-second-name">Second Name</label>
+        <input type="text" class="form-control" id="new-second-name">
+      </div>
+      <button class="reset" class="btn" id="reset">New Game</button>
+      <button class="submit" class="btn" id="submit">Start Game</button>
+    </form>
+
+    <div id="player">
       <div class="row">
         <div class="col-md-6">
-      <h3>Player 1</h3>
-      <p class="roll">Roll:</p>
-        <p class="roll">Score:</p>
-    </div>
-    <div class="col-md-6">
-      <h3>Player 2</h3>
-      <p class="roll">Roll:</p>
-        <p class="roll">Score:</p>
+          <h3>Player 1:</h3>
+          <p class="roll">Roll:<span id="roll-one"></span></p>
+          <p class="score">Score:<span id="score-one"></span></p>
+          <button class="btn btn-primary" id="roll1">Roll</button>
+          <button class="btn btn-primary" id="hold1">Hold</button>
+        </div>
+        <div class="col-md-6">
+          <h3>Player 2:</h3>
+          <p class="rolled">Roll:<span id="roll-two"></span></p>
+          <p class="scored">Score:<span id="score-two"></span></p>
+          <button class="btn btn-primary" id="roll2">Roll</button>
+          <button class="btn btn-primary" id="hold2">Hold</button>
+        </div>
+      </div>
     </div>
   </div>
 
-</div>
-  </body>
+</body>
 </html>
