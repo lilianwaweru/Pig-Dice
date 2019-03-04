@@ -28,7 +28,7 @@
         <label for="new-second-name">Second Name</label>
         <input type="text" class="form-control" id="new-second-name">
       </div>
-      <button class="reset" class="btn" id="reset">New Game</button>
+
       <button class="submit" class="btn" id="submit">Start Game</button>
     </form>
 
@@ -38,6 +38,7 @@
           <h3>Player 1:</h3>
           <p class="roll">Roll:<span id="roll-one"></span></p>
           <p class="score">Score:<span id="score-one"></span></p>
+          <p class="total">Total:<span id="total-one"></span><p>
           <button class="btn btn-primary" id="roll1">Roll</button>
           <button class="btn btn-primary" id="hold1">Hold</button>
         </div>
@@ -45,9 +46,13 @@
           <h3>Player 2:</h3>
           <p class="rolled">Roll:<span id="roll-two"></span></p>
           <p class="scored">Score:<span id="score-two"></span></p>
+          <p class="total">Total:<span id="total-two"></span><p>
           <button class="btn btn-primary" id="roll2">Roll</button>
           <button class="btn btn-primary" id="hold2">Hold</button>
         </div>
+        <div class="col-md-12">
+        <button class="reset" class="btn" id="reset">New Game</button>
+      </div>
       </div>
     </div>
   </div>

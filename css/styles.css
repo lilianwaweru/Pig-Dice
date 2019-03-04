@@ -6,6 +6,9 @@ body{
   background: url(file:///home/lilian/Downloads/pexels-photo-278943.jpeg)
 }
 .jumbotron{
-  margin: 10%
+  margin: 10%;
 
+}
+#reset{
+  margin-left: 27%;
 }
