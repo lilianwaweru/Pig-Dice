@@ -19,7 +19,7 @@ var secondName="";
 
 
 
-function player1(){
+function play1(){
   document.getElementById("roll1").disabled = false;
   document.getElementById("roll2").disabled = true;
 }
@@ -51,10 +51,11 @@ $(document).ready(function(){
     }
     $("#score-one").text(score1)
 
-    $("#hold1").click(function(){
+    $("#hold1").click(function(event){
+      event.preventDefault();
       roll1+=score1
       alert(score1)
-      score1=0
+
       if(score1==100){
         alert("You the winner")
       }else{
@@ -70,18 +71,18 @@ $(document).ready(function(){
       score2 += roll2
     }else {
       score2=0
-      play2()
+      play1()
     }
     $("#score-two").text(score2)
   })
-  $("#hold2").click(function(){
+  $("#hold2").click(function(event){
+    event.preventDefault();
     roll2+=score2
     alert(score2)
-    score2=0
     if(score2==100){
       alert("You the winner")
     }else{
-      play2()
+      play1()
     }
 
   });
