@@ -66,12 +66,13 @@ $(document).ready(function(){
 
     $("#hold1").click(function(event){
       event.preventDefault();
-      roll1==score1;
-      $("#total-one").text(total1);
+
+
       //alert("Your score is "+ score1);
        total1+=score1
+       score1=0
        $("#total-one").text(total1);
-      if(score1==100){
+      if(total1==100 || total1>100){
         alert("You the winner");
       }else{
         play2()
@@ -92,9 +93,10 @@ $(document).ready(function(){
   })
   $("#hold2").click(function(event){
     event.preventDefault();
-    roll2+=score2
+  total2+=score2
+  score2=0
      $("#total-two").text(total2);
-    if(score2==100){
+    if(total2==100 || total2>100){
       alert("You the winner")
     }else{
       play1()
